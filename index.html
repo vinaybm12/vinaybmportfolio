@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinay B M - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    
+      :root{
+        --accent: #7b2cbf;
+        --muted: #9ca3af;
+      }
+      html,body{height:100%;}
+      .accent-glow{
+        box-shadow: 0 8px 30px rgba(123,44,191,0.14);
+      }
+      .nav-backdrop{backdrop-filter: blur(6px);}
+      @keyframes floatY { 0% { transform: translateY(0); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0); } }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(8px);} to {opacity:1; transform:translateY(0);} }
+      @keyframes slideIn { from { opacity: 0; transform: translateX(20px);} to {opacity:1; transform:translateX(0);} }
+      .ani-fade { animation: fadeIn 700ms ease both; }
+      .ani-slide { animation: slideIn 700ms ease both; }
+      .ani-float { animation: floatY 4s ease-in-out infinite; }
+      .glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); }
+      /* Premium skill pills and cards */
+      .skill-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); padding: 1.25rem; border-radius: 1rem; }
+      .skill-category { color: var(--muted); font-weight:700; margin-bottom:0.75rem; font-size:1rem; }
+      .skill-list { display:flex; flex-wrap:wrap; gap:0.6rem; }
+      .skill-pill { display:inline-flex; align-items:center; gap:0.5rem; padding:0.5rem 0.9rem; border-radius:9999px; font-weight:700; color:#fff; background:linear-gradient(90deg, rgba(123,44,191,0.95), rgba(179,108,255,0.9)); box-shadow:0 8px 30px rgba(123,44,191,0.08); transition:transform .22s ease, box-shadow .22s ease, filter .22s ease; }
+      .skill-pill.secondary { background: linear-gradient(90deg, rgba(45,212,191,0.12), rgba(123,44,191,0.06)); color: #e6e6f0; border:1px solid rgba(255,255,255,0.02); box-shadow: inset 0 -6px 20px rgba(0,0,0,0.35); }
+      .skill-pill:hover { transform:translateY(-6px) scale(1.03); box-shadow:0 18px 40px rgba(123,44,191,0.14); filter:brightness(1.03); }
+      @media (max-width: 640px){ .skill-pill{ padding:0.45rem .75rem; font-size:0.9rem } }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-black via-gray-900 to-gray-950 text-gray-100 font-sans antialiased">
+
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-br from-[rgba(123,44,191,0.14)] to-transparent blur-3xl opacity-60 ani-float"></div>
+      <div class="absolute -bottom-44 -right-44 w-96 h-96 rounded-full bg-gradient-to-tr from-[rgba(45,212,191,0.06)] to-transparent blur-3xl opacity-50 ani-float" style="animation-delay: 200ms"></div>
+    </div>
+
+    <nav class="sticky top-4 z-40 mx-auto max-w-6xl px-6 py-2 rounded-xl nav-backdrop glass backdrop-blur-md flex items-center justify-between shadow-md">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[rgba(123,44,191,0.9)] to-[rgba(199,125,255,0.8)] flex items-center justify-center text-white font-semibold">VB</div>
+        <div>
+          <div class="text-sm font-semibold">Vinay B M</div>
+          <div class="text-xs text-[var(--muted)]">Devops · Communication · AI</div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#skills" class="hover:text-white transition">Skills</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </div>
+      <div class="md:hidden text-gray-300"><button id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button></div>
+    </nav>
+
+    <main class="mx-auto max-w-6xl px-6 py-12">
+      <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-8">
+        <div class="md:col-span-2 space-y-6 ani-fade">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight">Vinay B M</h1>
+            <div class="text-lg text-gray-300 mt-2">Cloud & DevOps Engineer specializing in Linux, AWS, Docker, Terraform, Kubernetes, Jenkins, Ansible, Git, and Shell Scripting. Passionate about designing scalable cloud infrastructure, automating deployment workflows, and building reliable DevOps solutions. Continuously learning modern cloud-native technologies and best practices while developing production-ready infrastructure.</div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/vinaybm12" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-[var(--accent)] text-white rounded-full shadow-md hover:scale-105 transition"> <i class="fab fa-github"></i> View GitHub</a>
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 bg-transparent border border-gray-700 text-gray-200 rounded-full hover:bg-gray-800 transition">View Projects</a>
+          </div>
+          <div class="mt-6 flex gap-4 text-sm text-gray-400">
+            <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-gray-400"></i> Bengaluru, Karnataka</div>
+            <div class="flex items-center gap-2"><i class="fas fa-envelope text-gray-400"></i> <a class="text-gray-300 hover:underline" href="mailto:vinaybm1206@gmail.com">vinaybm1206@gmail.com</a></div>
+          </div>
+        </div>
+
+        <aside class="md:col-span-1 ani-slide">
+          <div class="glass p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
+            <img src="public/Profile.png" alt="profile" class="w-28 h-28 rounded-full object-cover ring-2 ring-[rgba(123,44,191,0.18)] mb-4">
+            <div class="text-lg font-semibold">Vinay B M</div>
+            <div class="text-sm text-gray-400">Devops Intern</div>
+            <div class="mt-5 flex gap-3">
+            <a href="https://linkedin.com/in/vinay-b-m" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://github.com/vinaybm12" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="skills" class="mt-12 ani-fade">
+        <h2 class="font-serif text-2xl mb-4">Internship</h2>
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold text-lg mb-2">Cloud Computing Intern — Apphox Technologies — <span class="text-sm text-gray-400">Feb 2025 – Jun 2025</span></h3>
+          <ul class="list-disc pl-5 text-sm text-gray-300 space-y-2">
+            <li>Worked extensively with Linux administration, user management, file permissions, networking, package management, and server troubleshooting.</li>
+            <li>Automated repetitive administrative tasks using Shell Scripting to improve operational efficiency.</li>
+            <li>Deployed and managed cloud infrastructure on AWS using services including EC2, IAM, VPC, S3, Route 53, Load Balancer, Auto Scaling, CloudFront, SNS, RDS, and CloudWatch.</li>
+            <li>Built Infrastructure as Code (IaC) using Terraform for provisioning production-ready AWS resources with reusable modules.</li>
+            <li>Containerized applications using Docker by creating optimized Dockerfiles, managing images, volumes, and networking.</li>
+            <li>Configured CI/CD pipelines using Jenkins to automate code integration, application builds, testing, and deployments.</li>
+            <li>Worked with Kubernetes for deploying, scaling, and managing containerized applications using Deployments, Services, ConfigMaps, and Namespaces.</li>
+            <li>Implemented configuration management and server automation using Ansible playbooks for consistent infrastructure provisioning.</li>
+            <li>Used Git and GitHub for source code management, collaboration, branching strategies, pull requests, and version control.</li>
+            <li>Participated in deploying web applications using Apache and Nginx with reverse proxy configuration and SSL certificate setup.</li>
+            <li>Gained practical experience in monitoring, troubleshooting, debugging deployment issues, and maintaining cloud infrastructure following DevOps best practices.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="mt-12 ani-slide">
+        <h2 class="font-serif text-2xl mb-4">Selected Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/linux.png" alt="Linux Automation Toolkit" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Linux Automation Toolkit using Shell Scripting</h4>
+            <p class="text-sm text-gray-400 mt-2">Developed a menu-driven shell scripting project to automate Linux administrative tasks such as user creation, file copying between directories, disk usage monitoring, and software installation. The tool simplifies repetitive system administration tasks through an interactive menu-based interface, improving efficiency and reducing manual effort using <strong>Linux</strong>, <strong>Bash/Shell Scripting</strong>, and automation techniques.</p>
+          </article>
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/VPC.jpeg" alt="VPC diagram" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Multi‑AZ AWS Infrastructure</h4>
+            <p class="text-sm text-gray-400 mt-2">Implementation of multi availability zone scalable infrastructure using VPC and other AWS services. A highly available and scalable AWS infrastructure using a custom VPC across multiple Availability Zones. The architecture improves fault tolerance, load balancing, and application availability by distributing resources across public and private subnets in <strong>AWS</strong>.</p>
+          </article>
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/Echosketch.png" alt="Echosketch" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Echosketch — Voice to Visual</h4>
+            <p class="text-sm text-gray-400 mt-2">An AI-powered web application that converts voice or text prompts into images using Google Gemini, built with React, TypeScript, JavaScript, HTML, CSS (Tailwind) and the Web Speech API, delivering a fast, responsive, and accessible user experience.</p>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://echosketch-voice-to-vsuals.vercel.app" target="_blank">Live</a>
+            </div>
+          </article>
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/Affirmation.png" alt="Affirmation App" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Daily Affirmations — Full-Stack MERN Application</h4>
+            <p class="text-sm text-gray-400 mt-2">A full-stack MERN web application that delivers daily positive affirmations to users, with features for saving favorites and sharing affirmations across platforms. Built with MongoDB, Express, React, and Node.js, the app focuses on clean UI, persistent user data, and an engaging, wellness-oriented user experience.</p>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://affirmation-bay.vercel.app/" target="_blank">Live</a>
+            </div>
+          </article>
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/URL_Shortener.png" alt="URL Shortener" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">URL Shortener — Full-Stack MERN Application</h4>
+            <p class="text-sm text-gray-400 mt-2">A full-stack MERN web application that creates short URLs, tracks click analytics, and provides a responsive dashboard for managing links. Built with MongoDB, Express, React, and Node.js, the app supports real-time redirection, persistent link storage, and an intuitive UI for monitoring link performance and usage trends.</p>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Live</a>
+            </div>
+          </article>
+
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/Aws-terraform-vpc.png" alt="Terraform AWS Production VPC" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Terraform AWS Production VPC</h4>
+            <p class="text-sm text-gray-400 mt-2">Designed and deployed a production-grade AWS networking infrastructure using Terraform by implementing Infrastructure as Code (IaC) best practices. The project provisions a secure, scalable, and highly available Virtual Private Cloud (VPC) architecture, enabling automated infrastructure deployment and simplified cloud management.</p>
+            <ul class="text-sm text-gray-400 mt-3 list-disc pl-5 space-y-1">
+              <li>Designed and provisioned a production-ready AWS VPC using Terraform.</li>
+              <li>Created public and private subnets across multiple Availability Zones.</li>
+              <li>Configured Internet Gateway, NAT Gateway, Route Tables, and Elastic IPs.</li>
+              <li>Implemented Security Groups and Network ACLs for secure communication.</li>
+              <li>Built reusable and modular Terraform configurations.</li>
+              <li>Automated cloud infrastructure provisioning with Infrastructure as Code.</li>
+              <li>Managed infrastructure using Git and GitHub version control.</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://github.com/vinaybm12/terraform-aws-production-vpc" target="_blank">GitHub Repository</a>
+            </div>
+          </article>
+
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <h4 class="font-semibold">Jenkins CI/CD Automation Pipeline</h4>
+            <p class="text-sm text-gray-400 mt-2">Developed an end-to-end CI/CD pipeline using Jenkins to automate application deployment from GitHub to Linux-based web servers hosted on AWS. The project demonstrates DevOps best practices by integrating version control, automated deployment, and web server management for faster and reliable software delivery.</p>
+            <ul class="text-sm text-gray-400 mt-3 list-disc pl-5 space-y-1">
+              <li>Configured Jenkins Declarative Pipelines for deployment automation.</li>
+              <li>Integrated GitHub Webhooks to trigger automatic builds.</li>
+              <li>Automated application deployment to Nginx web servers.</li>
+              <li>Used Shell Scripting for deployment and server management.</li>
+              <li>Managed Linux servers hosted on AWS EC2.</li>
+              <li>Reduced manual deployment effort through CI/CD automation.</li>
+              <li>Implemented continuous delivery best practices.</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://github.com/vinaybm12/Jenkins-project.git" target="_blank">GitHub Repository</a>
+            </div>
+          </article>
+
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <h4 class="font-semibold">Two-Tier Application Deployment on AWS</h4>
+            <p class="text-sm text-gray-400 mt-2">Designed and deployed a two-tier application architecture on AWS using Docker containers and Linux servers. Configured Nginx as a reverse proxy to securely route client requests while following production deployment practices.</p>
+            <ul class="text-sm text-gray-400 mt-3 list-disc pl-5 space-y-1">
+              <li>Deployed frontend and backend applications on AWS EC2.</li>
+              <li>Built custom Docker images using Dockerfiles.</li>
+              <li>Configured Docker networking for service communication.</li>
+              <li>Implemented Nginx Reverse Proxy for request routing.</li>
+              <li>Managed Linux servers and application deployment.</li>
+              <li>Applied cloud networking and security best practices.</li>
+              <li>Improved deployment consistency using containerization.</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://github.com/vinaybm12/Two-tier_application_deployment" target="_blank">GitHub Repository</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mt-12 grid grid-cols-1 md:grid-cols-1 gap-6 ani-fade">
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold mb-3">Education</h3>
+          <ul class="text-sm text-gray-300 space-y-3">
+            <li><strong class="text-white">B.E (Electronics & Telecommunication)</strong><br>Dayananda Sagar College of Engineering (DSCE), Bengaluru — 2025</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="mt-12 ani-slide">
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold mb-4">Get in touch</h3>
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <div class="text-sm text-gray-300"><i class="fas fa-envelope mr-2 text-gray-400"></i> <a class="hover:underline" href="mailto:vinaybm1206@gmail.com">vinaybm1206@gmail.com</a></div>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://linkedin.com/in/vinay-b-m" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://github.com/vinaybm12" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-12 text-center text-sm text-gray-500">© <span id="year"></span> Vinay B M — Built with Tailwind</footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Mobile nav toggle (very small): toggles anchor visibility
+      const toggle = document.getElementById('navToggle');
+      if(toggle){
+        toggle.addEventListener('click', ()=>{
+          const nav = document.querySelector('nav div:nth-child(2)');
+          if(nav) nav.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>
